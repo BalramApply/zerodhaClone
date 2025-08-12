@@ -1,0 +1,13 @@
+.bottomRead{
+    background-color: #0f172a;
+    color: #cbd5e1;
+    text-align: center;
+    font-size: 2rem;
+}
+
+@media (max-width: 576px){
+    .bottomRead{
+        font-size: 1rem;
+        padding: 1.5rem;
+    }
+}

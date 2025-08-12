@@ -1,0 +1,287 @@
+/* Holdings.module.css - Modern Gray & Electric Blue Theme */
+
+.container {
+  background-color: #0f172a;
+  padding: 2rem;
+  min-height: 100vh;
+  color: #f8fafc;
+}
+
+/* Title styling */
+.title {
+  color: #f8fafc;
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #3b82f6;
+}
+
+/* Table container */
+.orderTable {
+  background-color: #1e293b;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  border: 1px solid #334155;
+}
+
+.orderTable table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+/* Table header */
+.orderTable table th {
+  background-color: #334155;
+  color: #f8fafc;
+  padding: 1rem 0.75rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  border-bottom: 2px solid #3b82f6;
+}
+
+/* Table rows */
+.allHoldings {
+  border-bottom: 1px solid #334155;
+  transition: all 0.2s ease;
+}
+
+.allHoldings:hover {
+  background-color: #334155;
+}
+
+.allHoldings:last-child {
+  border-bottom: none;
+}
+
+/* Table cells */
+.allHoldings td {
+  padding: 0.875rem 0.75rem;
+  font-family: 'Courier New', monospace;
+  font-size: 0.875rem;
+}
+
+.HoldingName {
+  color: #f8fafc;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  font-family: inherit;
+}
+
+.HoldingQty,
+.HoldingAvg,
+.HoldingPrice,
+.HoldingCurValue {
+  color: #cbd5e1;
+  text-align: right;
+  font-weight: 500;
+}
+
+/* Profit and Loss styling */
+:global(.holdings-container .profit) {
+  color: #22c55e;
+  font-weight: 600;
+  text-align: right;
+}
+
+:global(.holdings-container .loss) {
+  color: #ef4444;
+  font-weight: 600;
+  text-align: right;
+}
+
+/* More info section */
+.moreInfo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.dataKnow {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dataKnow:hover {
+  border-color: #3b82f6;
+  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.1);
+  transform: translateY(-3px);
+}
+
+.dataKnow h5 {
+  color: #f8fafc;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 0 0.5rem 0;
+  font-family: 'Courier New', monospace;
+}
+
+.dataKnow h5 span {
+  color: #64748b;
+  font-size: 1rem;
+}
+
+.dataKnow p {
+  color: #64748b;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+/* Special styling for P&L card */
+.dataKnow:last-child h5 {
+  color: #22c55e;
+}
+
+.dataKnow:last-child {
+  border-color: rgba(34, 197, 94, 0.3);
+  background-color: rgba(34, 197, 94, 0.02);
+}
+
+/* Vertical graph container */
+.VerticalGraphs {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  margin-top: 2rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Divider styling for sections */
+.divider {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #334155, transparent);
+  margin: 2rem 0;
+}
+
+/* Loading state */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  color: #64748b;
+  font-size: 1rem;
+}
+
+.loadingSpinner {
+  border: 2px solid #334155;
+  border-top: 2px solid #3b82f6;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+  margin-right: 0.75rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Empty state */
+.emptyState {
+  text-align: center;
+  padding: 3rem 2rem;
+  color: #64748b;
+}
+
+.emptyState h4 {
+  color: #cbd5e1;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.emptyState p {
+  color: #64748b;
+  font-size: 0.875rem;
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+  .orderTable {
+    overflow-x: auto;
+  }
+  
+  .orderTable table {
+    min-width: 800px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .orderTable table th,
+  .allHoldings td {
+    padding: 0.5rem 0.375rem;
+    font-size: 0.75rem;
+  }
+  
+  .moreInfo {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .dataKnow {
+    padding: 1rem;
+  }
+  
+  .dataKnow h5 {
+    font-size: 1.25rem;
+  }
+  
+  .VerticalGraphs {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .VerticalGraphs{
+    display: none;
+  }
+  .container {
+    padding: 0.5rem;
+  }
+  
+  .orderTable table th,
+  .allHoldings td {
+    padding: 0.375rem 0.25rem;
+    font-size: 0.625rem;
+  }
+  
+  .orderTable table th {
+    font-size: 0.625rem;
+  }
+  
+  .dataKnow h5 {
+    font-size: 1rem;
+  }
+  
+  .dataKnow p {
+    font-size: 0.75rem;
+  }
+}

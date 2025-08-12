@@ -1,0 +1,175 @@
+/* Hero.module.css - Modern Gray & Electric Blue Dark Mode */
+
+.container {
+  background-color: #0f172a; /* slate black background */
+  color: #cbd5e1; /* light slate for secondary text */
+  min-height: 100vh;
+  padding: 2rem 0;
+}
+
+/* Main heading styling */
+.container h1 {
+  color: #f8fafc; /* near white for top heading */
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  margin-bottom: 3rem;
+}
+
+/* Description section container */
+.discription {
+  border-top: 2px solid #1e293b !important; /* darker slate border */
+  margin-top: 4rem;
+}
+
+/* Paragraph text styling */
+.discription p {
+  color: #64748b; /* medium slate for paragraph text */
+  line-height: 1.7;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Anchor tag styling */
+.anchorTag {
+  color: #3b82f6; /* electric blue for links */
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.anchorTag:hover {
+  color: #60a5fa; /* lighter blue on hover */
+  text-decoration: none;
+  border-bottom-color: #3b82f6;
+  transform: translateY(-1px);
+}
+
+.anchorTag:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Row and column enhancements */
+.container .row {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Add subtle hover effect to description sections */
+.discription .col-6 {
+  transition: transform 0.3s ease;
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.discription .col-6:hover {
+  transform: translateY(-2px);
+  background-color: rgba(30, 41, 59, 0.3); /* subtle hover background */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem 0;
+  }
+  
+  .container h1 {
+    font-size: 1.8rem !important;
+    line-height: 1.4;
+    padding: 0 1rem;
+  }
+  
+  .discription .col-6 {
+    padding: 1.5rem;
+  }
+  
+  .discription p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .container h1 {
+    font-size: 1.5rem !important;
+  }
+  
+  .discription {
+    margin-top: 2rem;
+  }
+  
+  .discription .col-6 {
+    padding: 1rem;
+  }
+  .titlesTrack{
+    width: 100%;
+    margin: 0rem !important;
+    padding: 0rem !important;
+  }
+  .discription{
+    width: 100%;
+    margin: 0rem !important;
+    padding: 2rem !important;
+  }
+  .aboutTrack{
+    width: 100%;
+    margin: 0rem !important;
+    padding: 0rem !important;
+  }
+}
+
+/* Add a subtle gradient overlay for depth */
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background: linear-gradient(135deg, #0f172a 0%, rgba(15, 23, 42, 0.7) 100%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Text selection styling */
+.container ::selection {
+  background-color: #3b82f6;
+  color: #ffffff;
+}
+
+.container ::-moz-selection {
+  background-color: #3b82f6;
+  color: #ffffff;
+}
+
+/* Focus styles for accessibility */
+.container *:focus {
+  outline-color: #3b82f6;
+}
+
+/* Animation for smooth entrance */
+.container {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Enhanced typography */
+.container h1 {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.discription p {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}

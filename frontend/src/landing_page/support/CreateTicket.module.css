@@ -1,0 +1,292 @@
+/* CreateTicket.module.css - Modern Gray & Electric Blue Theme */
+
+.container {
+  background-color: #0f172a; /* slate black background */
+  color: #f8fafc; /* near white text */
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  padding: 2rem 0;
+}
+
+/* Main heading */
+.container h1 {
+  color: #f8fafc; /* near white for main heading */
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  letter-spacing: -0.025em;
+  position: relative;
+}
+
+.container h1::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+  border-radius: 2px;
+}
+
+/* Row styling */
+.container .row {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Column styling */
+.container .col-4 {
+  background: linear-gradient(135deg, #1e293b 0%, rgba(30, 41, 59, 0.8) 100%);
+  border-radius: 12px;
+  border: 1px solid rgba(59, 130, 246, 0.1);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  flex: 1;
+  min-width: 300px;
+  max-width: 400px;
+}
+
+.container .col-4::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.container .col-4:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+.container .col-4:hover::before {
+  opacity: 1;
+}
+
+/* Category headings with icons */
+.container .col-4 h4 {
+  color: #f8fafc; /* near white for category headings */
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #334155;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  letter-spacing: -0.025em;
+}
+
+.container .col-4 h4 i {
+  color: #3b82f6; /* electric blue for icons */
+  font-size: 1.1em;
+  width: 24px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.container .col-4:hover h4 i {
+  color: #60a5fa;
+  transform: scale(1.1);
+}
+
+/* Support links styling */
+.supportLinks {
+  color: #cbd5e1; /* light slate for links */
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  padding: 6px 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  position: relative;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  width: 100%;
+  padding-left: 8px;
+}
+
+.supportLinks::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 100%;
+  background-color: rgba(59, 130, 246, 0.1);
+  transition: width 0.3s ease;
+  border-radius: 4px;
+  z-index: -1;
+}
+
+.supportLinks:hover {
+  color: #3b82f6; /* electric blue on hover */
+  text-decoration: none;
+  padding-left: 12px;
+}
+
+.supportLinks:hover::before {
+  width: 100%;
+}
+
+.supportLinks:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.supportLinks:active {
+  transform: translateX(2px);
+}
+
+/* Specific icon colors for different categories */
+.container .col-4:nth-child(1) h4 i { /* Account Opening */
+  color: #10b981; /* emerald */
+}
+
+.container .col-4:nth-child(2) h4 i { /* User Account */
+  color: #f59e0b; /* amber */
+}
+
+.container .col-4:nth-child(3) h4 i { /* Trading */
+  color: #3b82f6; /* blue */
+}
+
+.container .col-4:nth-child(4) h4 i { /* Funds */
+  color: #8b5cf6; /* violet */
+}
+
+.container .col-4:nth-child(5) h4 i { /* Console */
+  color: #ec4899; /* pink */
+}
+
+.container .col-4:nth-child(6) h4 i { /* Coin */
+  color: #f97316; /* orange */
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  .container .row {
+    justify-content: center;
+  }
+  
+  .container .col-4 {
+    min-width: 280px;
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .container .row {
+    padding: 0 !important;
+    gap: 0.5rem;
+  }
+  
+  .container .col-4 {
+    min-width: 100%;
+    max-width: none;
+    margin: 0.5rem 0 !important;
+    padding: 1.5rem !important;
+  }
+  
+  .container h1 {
+    font-size: 1.75rem !important;
+    margin-bottom: 2rem;
+  }
+  
+  .container .col-4 h4 {
+    font-size: 1.1rem;
+  }
+  
+  .supportLinks {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .container .col-4 {
+    padding: 1rem !important;
+  }
+  
+  .container .col-4 h4 {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  
+  .container .col-4 h4 i {
+    font-size: 1.5em;
+  }
+  .ticketTopics{
+    width: 100%;
+    padding: 0 !important;
+  }
+}
+
+/* Animation for smooth entry */
+.container {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Staggered animation for cards */
+.container .col-4 {
+  animation: slideInLeft 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.container .col-4:nth-child(1) { animation-delay: 0.1s; }
+.container .col-4:nth-child(2) { animation-delay: 0.2s; }
+.container .col-4:nth-child(3) { animation-delay: 0.3s; }
+.container .col-4:nth-child(4) { animation-delay: 0.4s; }
+.container .col-4:nth-child(5) { animation-delay: 0.5s; }
+.container .col-4:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Enhanced accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .container,
+  .container .col-4,
+  .supportLinks,
+  .container .col-4 h4 i {
+    animation: none;
+    transition: none;
+  }
+}

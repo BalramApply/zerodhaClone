@@ -1,0 +1,339 @@
+/* Navbar.module.css - Modern Gray & Electric Blue Theme - No Bootstrap */
+
+.navContainer {
+  background-color: #0f172a; /* slate black background */
+  border-bottom: 1px solid #334155;
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+/* Brand/Logo styling */
+.brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  z-index: 1001;
+}
+
+.navLogo {
+  height: 40px;
+  width: auto;
+  transition: transform 0.2s ease;
+}
+
+.navLogo:hover {
+  transform: scale(1.05);
+}
+
+/* Mobile menu toggle button */
+.toggler {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1001;
+  position: relative;
+}
+
+.togglerIcon {
+  width: 25px;
+  height: 3px;
+  background-color: #3b82f6; /* electric blue */
+  margin: 3px 0;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+/* Hamburger animation */
+.toggler:hover .togglerIcon {
+  background-color: #60a5fa;
+}
+
+/* Navigation menu */
+.navMenu {
+  display: flex;
+  align-items: center;
+}
+
+.navList {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navItem {
+  margin: 0;
+}
+
+.navLink {
+  color: #cbd5e1; /* light slate */
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  position: relative;
+  display: block;
+}
+
+.navLink:hover {
+  color: #f8fafc; /* near white */
+  background-color: rgba(59, 130, 246, 0.1);
+  transform: translateY(-1px);
+}
+
+/* Active/hover underline effect */
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: #3b82f6;
+  border-radius: 1px;
+  transition: width 0.3s ease;
+}
+
+.navLink:hover::after {
+  width: 80%;
+}
+
+/* Register button styling */
+.registerBtn {
+  background-color: #3b82f6 !important; /* electric blue */
+  color: #ffffff !important; /* white text */
+  font-weight: 600;
+  margin-left: 0.5rem;
+  border: 2px solid #3b82f6;
+}
+
+.registerBtn:hover {
+  background-color: #2563eb !important;
+  border-color: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.registerBtn::after {
+  display: none; /* Remove underline for button */
+}
+
+/* Login button styling */
+.loginBtn {
+  background-color: #1e293b !important; /* dark slate */
+  color: #3b82f6 !important; /* electric blue text */
+  border: 2px solid #3b82f6;
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+
+.loginBtn:hover {
+  background-color: #334155 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+}
+
+.loginBtn::after {
+  display: none; /* Remove underline for button */
+}
+
+/* Logout button styling */
+.logoutBtn {
+  background-color: transparent !important;
+  color: #f87171 !important; /* red */
+  border: 2px solid #f87171;
+  font-weight: 600;
+}
+
+.logoutBtn:hover {
+  background-color: rgba(248, 113, 113, 0.1) !important;
+  color: #fca5a5 !important;
+  border-color: #fca5a5;
+  transform: translateY(-2px);
+}
+
+.logoutBtn::after {
+  display: none; /* Remove underline for button */
+}
+
+/* Focus states for accessibility */
+.navLink:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+.brand:focus .navLogo {
+  outline: 2px solid #3b82f6;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+.toggler:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Tablet and Mobile Responsiveness */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+  
+  .navList {
+    gap: 0.25rem;
+  }
+  
+  .navLink {
+    padding: 0.625rem 0.875rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .toggler {
+    display: flex;
+  }
+  
+  .navMenu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100vh;
+    background-color: rgba(15, 23, 42, 0.98);
+    backdrop-filter: blur(10px);
+    transition: right 0.3s ease;
+    padding-top: 80px;
+    border-left: 1px solid #334155;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .navMenuOpen {
+    right: 0;
+  }
+  
+  .navList {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1rem;
+    gap: 0.5rem;
+    width: 100%;
+  }
+  
+  .navItem {
+    width: 100%;
+  }
+  
+  .navLink {
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    border-radius: 0.5rem;
+  }
+  
+  .navLink::after {
+    display: none; /* Remove underline in mobile */
+  }
+  
+  .registerBtn,
+  .loginBtn {
+    margin: 0.5rem 0;
+  }
+  
+  /* Hamburger animation when menu is open */
+  .navMenuOpen ~ .toggler .togglerIcon:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .navMenuOpen ~ .toggler .togglerIcon:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .navMenuOpen ~ .toggler .togglerIcon:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+    height: 60px;
+  }
+  
+  .navLogo {
+    height: 32px;
+  }
+  
+  .navMenu {
+    width: 280px;
+    padding-top: 70px;
+  }
+  
+  .navLink {
+    padding: 0.875rem;
+    font-size: 0.9rem;
+  }
+  
+  .toggler {
+    padding: 0.375rem;
+  }
+  
+  .togglerIcon {
+    width: 22px;
+    height: 2.5px;
+  }
+}
+
+/* Dark overlay for mobile menu */
+@media (max-width: 768px) {
+  .navMenuOpen::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+  }
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent body scroll when mobile menu is open */
+body:has(.navMenuOpen) {
+  overflow: hidden;
+}
+
+/* Alternative for browsers that don't support :has() */
+@media (max-width: 768px) {
+  .navMenuOpen {
+    position: fixed;
+  }
+}

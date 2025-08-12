@@ -1,0 +1,335 @@
+/* Awards.module.css - Modern Gray & Electric Blue Theme */
+
+/* Main container */
+.container {
+  background-color: #0f172a; /* slate black background */
+  color: #f8fafc; /* near white text */
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background pattern */
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Row styling */
+.container .row {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+  min-height: 80vh;
+}
+
+/* Left column with broker image */
+.container .col-6:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.container .col-6:first-child img {
+  max-width: 100%;
+  height: auto;
+  filter: brightness(1.1) contrast(1.05);
+  transition: all 0.4s ease;
+  animation: fadeInLeft 0.8s ease-out;
+  border-radius: 12px;
+}
+
+.container .col-6:first-child img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2) contrast(1.1) drop-shadow(0 10px 20px rgba(59, 130, 246, 0.3));
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Right column with content */
+.container .col-6:last-child {
+  animation: fadeInRight 0.8s ease-out 0.2s both;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Main heading */
+.container h1 {
+  color: #f8fafc; /* near white */
+  font-size: 2.75rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  position: relative;
+}
+
+.container h1::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+  border-radius: 2px;
+}
+
+/* Paragraph styling */
+.container p {
+  color: #64748b; /* medium slate */
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+/* List containers */
+.container .row .col-6 {
+  padding: 0.5rem 1rem;
+}
+
+/* List styling */
+.container ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.container li {
+  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 2rem;
+  transition: all 0.3s ease;
+}
+
+/* Custom bullet points */
+.container li::before {
+  content: '▶';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #3b82f6; /* electric blue */
+  font-size: 0.8rem;
+  transform: rotate(0deg);
+  transition: all 0.3s ease;
+}
+
+.container li:hover::before {
+  color: #60a5fa; /* lighter blue on hover */
+  transform: rotate(90deg) scale(1.1);
+}
+
+/* List item paragraphs */
+.container li p {
+  color: #cbd5e1; /* light slate */
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.container li:hover p {
+  color: #f8fafc; /* near white on hover */
+  transform: translateX(4px);
+}
+
+/* Press logos image */
+.pressLogosImage {
+  max-width: 100%;
+  height: auto;
+  margin-top: 2rem;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+  filter: grayscale(100%) brightness(1.2);
+  border-radius: 8px;
+}
+
+.pressLogosImage:hover {
+  opacity: 1;
+  filter: grayscale(0%) brightness(1.1);
+  transform: translateY(-2px);
+}
+
+/* Enhanced styling for statistics */
+.container .col-6:last-child > p {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(30, 41, 59, 0.3) 100%);
+  padding: 1.5rem;
+  border-radius: 10px;
+  border-left: 4px solid #3b82f6;
+  position: relative;
+}
+
+/* Responsive design */
+/* @media (max-width: 992px) {
+  .container h1 {
+    font-size: 2.25rem;
+  }
+  
+  .container .row {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 2rem 1rem !important;
+  }
+  
+  .container .col-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+  
+  .container .col-6:first-child {
+    order: 1;
+    margin-bottom: 3rem;
+  }
+  
+  .container .col-6:last-child {
+    order: 2;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+  
+  .container h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1.25rem;
+  }
+  
+  .container h1::after {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+  }
+  
+  .container .row .col-6 {
+    padding: 0.5rem 0;
+  }
+  
+  .pressLogosImage {
+    margin-top: 1.5rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+} */
+
+@media (max-width: 576px) {
+  .container h1 {
+    font-size: 1.75rem;
+  }
+  
+  .container p {
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  .container li p {
+    font-size: 0.95rem;
+  }
+  
+  .container li {
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+  .imageContainer{
+    width: 100%;
+
+  }
+  .AwardsDetails{
+    width: 100%;
+    margin: 0 !important;
+  }
+  .images{
+    width: 22rem;
+  }
+  .pressLogosImage{
+    height: 2rem;
+  }
+}
+
+/* Animation preferences */
+@media (prefers-reduced-motion: reduce) {
+  .container .col-6:first-child img,
+  .container .col-6:last-child,
+  .container li::before,
+  .container li p,
+  .pressLogosImage {
+    animation: none;
+    transition: none;
+  }
+  
+  .container .col-6:first-child img:hover,
+  .container li:hover::before,
+  .container li:hover p,
+  .pressLogosImage:hover {
+    transform: none;
+  }
+}
+
+/* Enhanced focus states */
+.container li:focus-within {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Loading state for images */
+.container img {
+  background-color: #1e293b;
+  border-radius: 8px;
+}
+
+/* High performance optimizations */
+.container * {
+  will-change: auto;
+}
+
+.container .col-6:first-child img:hover,
+.container li:hover,
+.pressLogosImage:hover {
+  will-change: transform;
+}
+
+/* Utility class overrides */
+.container :global(.mb-5) {
+  margin-bottom: 3rem !important;
+}
+
+.container :global(.mt-5) {
+  margin-top: 3rem !important;
+}

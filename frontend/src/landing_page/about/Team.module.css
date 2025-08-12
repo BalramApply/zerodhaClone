@@ -1,0 +1,255 @@
+/* Team.module.css - Modern Gray & Electric Blue Dark Mode */
+
+.container {
+  background-color: #0f172a; /* slate black background */
+  color: #cbd5e1; /* light slate for secondary text */
+}
+
+/* Main heading styling */
+.container h1 {
+  color: #f8fafc; /* near white for top heading */
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  letter-spacing: -0.02em;
+}
+
+/* Border top styling */
+.container .border-top {
+  border-top: 2px solid #1e293b !important; /* darker slate border */
+  padding-top: 2rem;
+}
+
+.profile{
+  text-align: center;
+}
+.infoFounder{
+  text-align: center;
+}
+/* Description section */
+.discription {
+  margin-top: 2rem;
+  align-items: center;
+}
+
+/* Founder image styling */
+.founderImage {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #3b82f6; /* electric blue border */
+  box-shadow: 0 8px 32px rgba(59, 130, 246, 0.2); /* subtle blue glow */
+  transition: all 0.3s ease;
+}
+
+.founderImage:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 40px rgba(59, 130, 246, 0.3);
+  border-color: #60a5fa; /* lighter blue on hover */
+}
+
+/* Name and title styling */
+.container h4 {
+  color: #f8fafc; /* near white for name */
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.container h6 {
+  color: #cbd5e1; /* light slate for title */
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin-bottom: 0;
+}
+
+/* Paragraph text styling */
+.discription p {
+  color: #64748b; /* medium slate for paragraph text */
+  line-height: 1.7;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Links styling */
+.discription a {
+  color: #3b82f6; /* electric blue for links */
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.discription a:hover {
+  color: #60a5fa; /* lighter blue on hover */
+  text-decoration: none;
+  background-color: rgba(59, 130, 246, 0.1);
+  border-bottom-color: #3b82f6;
+  transform: translateY(-1px);
+}
+
+.discription a:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+  background-color: rgba(59, 130, 246, 0.1);
+}
+
+/* Column styling enhancements */
+.container .col-6 {
+  transition: transform 0.3s ease;
+}
+
+.container .col-6:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.container .col-6:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 2rem;
+}
+
+/* Row enhancements */
+.container .row {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem 0;
+  }
+  
+  .container h1 {
+    font-size: 2rem;
+  }
+  
+  .founderImage {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .container .col-6:last-child {
+    padding-left: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .discription p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .container h1 {
+    font-size: 1.8rem;
+  }
+  
+  .founderImage {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .container .col-6 {
+    padding: 1rem !important;
+  }
+  
+  .container .col-6:last-child {
+    padding-left: 1rem !important;
+  }
+  
+  .discription a {
+    display: inline-block;
+    margin: 0.25rem;
+    padding: 0.5rem 0.75rem;
+    background-color: rgba(59, 130, 246, 0.1);
+    border-radius: 6px;
+  }
+  .infoFounder{
+    width: 100%;
+    margin: 0rem !important;
+    padding: 0rem !important;
+  }
+  .aboutFounder{
+    width: 100%;
+    margin: 0rem !important;
+    padding: 2rem !important;
+  }
+}
+
+/* Add subtle background pattern */
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.03) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Text selection styling */
+.container ::selection {
+  background-color: #3b82f6;
+  color: #ffffff;
+}
+
+.container ::-moz-selection {
+  background-color: #3b82f6;
+  color: #ffffff;
+}
+
+/* Animation for smooth entrance */
+.container {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Enhanced typography */
+.container h1 {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.container h4 {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.discription p {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Profile section hover effect */
+.container .col-6:first-child:hover {
+  transform: translateY(-5px);
+}
+
+/* Links container styling */
+.discription p:last-child {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #1e293b;
+}

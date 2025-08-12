@@ -1,0 +1,250 @@
+/* Footer.module.css - Modern Gray & Electric Blue Dark Mode */
+
+.container {
+  background-color: #0f172a; /* slate black background */
+  color: #cbd5e1; /* light slate for secondary text */
+  padding: 3rem 2rem 2rem 2rem;
+  border-top: 2px solid #1e293b !important; 
+  /* margin-top: 4rem !important; */
+  position: relative;
+}
+
+/* Add subtle background pattern */
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 10% 20%, rgba(59, 130, 246, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 90% 80%, rgba(59, 130, 246, 0.02) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Logo styling */
+.logo {
+  height: 50px;
+  width: auto;
+  margin-bottom: 1.5rem;
+  filter: brightness(0) invert(1); /* Makes logo white if it's dark */
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+  filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(200deg) brightness(1.2);
+}
+
+/* Column headings (Company, Support, Account) */
+.container .col > p:first-child {
+  color: #f8fafc; /* near white for column headings */
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+}
+
+/* Add underline to column headings */
+.container .col > p:first-child::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background-color: #3b82f6; /* electric blue underline */
+}
+
+/* Copyright text styling */
+.container .col:first-child > p {
+  color: #64748b; /* medium slate for copyright */
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-top: 1rem;
+}
+
+/* Links styling */
+.container a {
+  color: #cbd5e1; /* light slate for links */
+  text-decoration: none;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  transition: all 0.3s ease;
+  display: inline-block;
+  padding: 0.25rem 0;
+  position: relative;
+}
+
+.container a:hover {
+  color: #3b82f6; /* electric blue on hover */
+  text-decoration: none;
+  transform: translateX(5px);
+}
+
+/* Add subtle hover effect with underline */
+.container a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #3b82f6;
+  transition: width 0.3s ease;
+}
+
+.container a:hover::after {
+  width: 100%;
+}
+
+/* Column spacing */
+.container .col {
+  margin-bottom: 2rem;
+  padding-right: 2rem;
+}
+
+.container .col:last-child {
+  padding-right: 0;
+}
+
+/* Notification/disclaimer section */
+.notify {
+  margin-top: 3rem !important;
+  padding-top: 2rem;
+  border-top: 1px solid #1e293b;
+}
+
+.notify p {
+  color: #64748b !important; /* medium slate for disclaimer text */
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+/* Row styling */
+.container .row {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    padding: 2rem 1rem 1.5rem 1rem;
+  }
+  
+  .container .col {
+    margin-bottom: 2.5rem;
+    padding-right: 0;
+  }
+  
+  .container .col > p:first-child {
+    font-size: 1.1rem;
+  }
+  
+  .logo {
+    height: 40px;
+  }
+  
+  .notify {
+    margin-top: 2rem !important;
+  }
+  
+  .notify p {
+    font-size: 0.8rem;
+    text-align: left;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 1.5rem 1rem;
+  }
+  
+  .container .col > p:first-child {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .container a {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  
+  .logo {
+    height: 35px;
+  }
+  
+  .notify p {
+    font-size: 0.75rem;
+  }
+}
+
+/* Text selection styling */
+.container ::selection {
+  background-color: #3b82f6;
+  color: #ffffff;
+}
+
+.container ::-moz-selection {
+  background-color: #3b82f6;
+  color: #ffffff;
+}
+
+/* Focus styles for accessibility */
+.container a:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Animation for footer appearance */
+.container {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Enhanced spacing between link groups */
+.container .col a {
+  margin-right: 0.5rem;
+}
+
+.container .col a:last-child {
+  margin-bottom: 0;
+}
+
+/* Special styling for the first column with logo and copyright */
+.container .col:first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Improve readability of legal text */
+.notify {
+  background-color: rgba(30, 41, 59, 0.3);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-top: 1px solid #334155 !important;
+}
+
+/* Add subtle shadow to the entire footer */
+.container {
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
+}

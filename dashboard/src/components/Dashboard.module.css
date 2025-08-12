@@ -1,0 +1,64 @@
+/* Desktop Layout - Default */
+.responsiveDashboard {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+.desktopLayout {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.mobileLayout {
+  display: none;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* Mobile Layout - Media Query */
+@media (max-width: 768px) {
+  .desktopLayout {
+    display: none;
+  }
+  
+  .mobileLayout {
+    display: block;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .mobileWatchListContainer {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    overflow-y: auto;
+  }
+  
+  .mobileContentContainer {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    overflow-y: auto;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media (max-width: 600px) {
+  .mobileWatchListContainer,
+  .mobileContentContainer {
+    padding: 0px;
+  }
+}
+
+/* Tablet adjustments if needed */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .content {
+    padding: 15px;
+  }
+}

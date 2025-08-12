@@ -1,0 +1,277 @@
+/* RightSection.module.css - Modern Gray & Electric Blue Dark Mode */
+
+.container {
+  background-color: #0f172a; /* slate black background */
+  color: #cbd5e1; /* light slate for secondary text */
+  padding: 3rem 2rem;
+  /* margin-top: 3rem !important; */
+  /* border-radius: 12px; */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Add subtle background pattern */
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 80% 30%, rgba(59, 130, 246, 0.05) 0%, transparent 60%),
+    radial-gradient(circle at 20% 70%, rgba(59, 130, 246, 0.03) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Row and column adjustments */
+.container .row {
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.container .col-6:first-child {
+  padding-right: 2rem;
+}
+
+.container .col-6:last-child {
+  padding-left: 2rem;
+}
+
+/* Product image styling */
+.container img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease;
+  border: 1px solid #1e293b;
+}
+
+.container img:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 20px 60px rgba(59, 130, 246, 0.2);
+}
+
+/* Product name (h1) styling */
+.container h1 {
+  color: #f8fafc; /* near white for product name */
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+/* Product description styling */
+.container p {
+  color: #64748b; /* medium slate for description */
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  text-align: justify;
+}
+
+/* Learn More link styling */
+.learnMoreAnchor {
+  background-color: transparent !important;
+  color: #3b82f6 !important;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.75rem 2rem;
+  border: 2px solid #3b82f6;
+  border-radius: 8px;
+  display: inline-block;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.learnMoreAnchor:hover {
+  background-color: #3b82f6 !important;
+  color: #ffffff !important;
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+}
+
+/* Add subtle shine effect to button */
+.learnMoreAnchor::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.6s ease;
+}
+
+.learnMoreAnchor:hover::before {
+  left: 100%;
+}
+
+/* Focus states for accessibility */
+.learnMoreAnchor:focus {
+  outline: 3px solid #60a5fa;
+  outline-offset: 2px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    padding: 2rem 1rem;
+  }
+  
+  .container .row {
+    flex-direction: column-reverse; /* Image goes on top on mobile */
+  }
+  
+  .container .col-6:first-child,
+  .container .col-6:last-child {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .container .col-6:first-child {
+    margin-top: 2rem !important;
+    padding-top: 2rem !important;
+  }
+  
+  .container h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  .container p {
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  .learnMoreAnchor {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  /* .container {
+    padding: 1.5rem 1rem;
+  } */
+  
+  .container h1 {
+    font-size: 1.8rem;
+  }
+  
+  .container p {
+    font-size: 0.95rem;
+  }
+  
+  .learnMoreAnchor {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+  }
+  .imageContainRight{
+    width: 100%;
+  }
+  .aboutRight{
+    width: 100%;
+  }
+}
+
+/* Text selection styling */
+.container ::selection {
+  background-color: #3b82f6;
+  color: #ffffff;
+}
+
+.container ::-moz-selection {
+  background-color: #3b82f6;
+  color: #ffffff;
+}
+
+/* Animation for section appearance */
+.container {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.container .col-6:first-child {
+  animation: slideInRight 0.8s ease-out 0.2s both;
+}
+
+.container .col-6:last-child {
+  animation: slideInLeft 0.8s ease-out 0.4s both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Add subtle hover effect to entire container */
+.container:hover {
+  box-shadow: 0 5px 30px rgba(59, 130, 246, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Alternating section styling - add visual distinction */
+.container {
+  position: relative;
+}
+
+.container::after {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #3b82f6, transparent);
+  opacity: 0.3;
+}
+
+/* Content alignment for text section */
+.container .col-6:first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Image section alignment */
+.container .col-6:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

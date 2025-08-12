@@ -1,0 +1,253 @@
+/* Positions.module.css - Modern Gray & Electric Blue Theme */
+
+/* Base styles */
+.container {
+  background-color: #0f172a;
+  color: #64748b;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  line-height: 1.6;
+  /* padding: 12rem; */
+}
+
+/* Typography */
+.topHeading {
+  color: #f8fafc;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.secondaryHeading {
+  color: #cbd5e1;
+  font-size: 1.875rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.paragraph {
+  color: #64748b;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Buttons */
+.primaryButton {
+  background-color: #3b82f6;
+  color: #ffffff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.primaryButton:hover {
+  background-color: #2563eb;
+  transform: translateY(-1px);
+}
+
+.primaryButton:active {
+  background-color: #1d4ed8;
+  transform: translateY(0);
+}
+
+.secondaryButton {
+  background-color: #1e293b;
+  color: #3b82f6;
+  border: 2px solid #3b82f6;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.secondaryButton:hover {
+  background-color: #3b82f6;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.secondaryButton:active {
+  background-color: #2563eb;
+  transform: translateY(0);
+}
+
+/* Hero section with overlay */
+.heroSection {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0f172a;
+}
+
+.heroImageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, #0f172a, rgba(15, 23, 42, 0.7));
+  z-index: 1;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  padding: 2rem;
+}
+
+/* Layout utilities */
+.flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.marginBottom {
+  margin-bottom: 2rem;
+}
+
+.paddingLarge {
+  padding: 2rem;
+}
+
+.paddingMedium {
+  padding: 1rem;
+}
+
+/* Card component */
+.card {
+  background-color: #1e293b;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #334155;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  border-color: #3b82f6;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.1);
+}
+
+/* Navigation */
+.nav {
+  background-color: #0f172a;
+  padding: 1rem 0;
+  border-bottom: 1px solid #1e293b;
+}
+
+.navLink {
+  color: #cbd5e1;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  transition: all 0.2s ease;
+}
+
+.navLink:hover {
+  color: #3b82f6;
+  background-color: #1e293b;
+}
+
+.navLinkActive {
+  color: #3b82f6;
+  background-color: #1e293b;
+}
+
+/* Positions component specific styles */
+.title {
+  color: #f8fafc;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  padding: 0 1rem;
+}
+
+/* Table styles */
+.orderTable {
+  overflow-x: auto;
+  border-radius: 0.75rem;
+  background-color: #1e293b;
+  margin: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.orderTable table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.tableData {
+  background-color: #334155;
+}
+
+.tableRowData {
+  color: #f8fafc;
+  font-weight: 600;
+  padding: 1rem 0.75rem;
+  text-align: left;
+  border-bottom: 2px solid #1e293b;
+  font-size: 0.875rem;
+}
+
+.orderTable td {
+  color: #cbd5e1;
+  padding: 0.875rem 0.75rem;
+  border-bottom: 1px solid #374151;
+  font-size: 0.875rem;
+}
+
+.orderTable tr:hover {
+  background-color: #374151;
+}
+
+.orderTable tr:last-child td {
+  border-bottom: none;
+}
+
+/* Profit and Loss styling */
+.profit {
+  color: #10b981 !important;
+  font-weight: 600;
+}
+
+.loss {
+  color: #ef4444 !important;
+  font-weight: 600;
+}
+
+/* Responsive table */
+@media (max-width: 768px) {
+  .orderTable {
+    margin: 0.5rem;
+    font-size: 0.75rem;
+  }
+  
+  .tableRowData {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.75rem;
+  }
+  
+  .orderTable td {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.75rem;
+  }
+  
+  .title {
+    font-size: 1.25rem;
+    padding: 0 0.5rem;
+  }
+}

@@ -1,0 +1,148 @@
+/* Education.module.css - Modern Gray & Electric Blue Theme */
+
+.container {
+  background-color: #0f172a;
+  /* min-height: 100vh; */
+  padding: 4rem 2rem;
+}
+
+.container h1 {
+  color: #f8fafc;
+  font-weight: bold;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.container p {
+  color: #64748b;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.education {
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+  filter: brightness(1.1) contrast(1.1);
+  transition: transform 0.3s ease;
+}
+
+.education:hover {
+  transform: scale(1.02);
+}
+
+.linksStyle {
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #3b82f6;
+  border-radius: 0.5rem;
+  background-color: #1e293b;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.linksStyle:hover {
+  background-color: #3b82f6;
+  color: #ffffff;
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.linksStyle i {
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.linksStyle:hover i {
+  transform: translateX(4px);
+}
+
+/* Row and column adjustments */
+.container .row {
+  align-items: center;
+  min-height: 80vh;
+}
+
+.container .col-6 {
+  padding: 2rem;
+}
+
+.container .col-6:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Special styling for multiple links section */
+.container .col-6 > p.mt-5 {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #334155;
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+  .container {
+    padding: 3rem 1rem;
+  }
+  
+  .container .row {
+    min-height: auto;
+  }
+  
+  .container .col-6 {
+    padding: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .container h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  .container p {
+    text-align: center;
+    font-size: 1rem;
+  }
+  
+  .linksStyle {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 2rem auto;
+    width: fit-content;
+  }
+  
+  .education {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 2rem 0.5rem;
+  }
+  
+  .container h1 {
+    font-size: 1.75rem;
+  }
+  
+  .linksStyle {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+  .imageVisinity{
+    width: 100%;
+  }
+  .imageDetail{
+    width: 100%;
+  }
+}

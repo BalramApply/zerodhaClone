@@ -1,0 +1,329 @@
+/* Funds.module.css - Modern Gray & Electric Blue Theme */
+
+.container {
+  background-color: #0f172a;
+  width: 100%;
+  min-height: 100vh;
+  color: #f8fafc;
+}
+
+/* Top funds section */
+.funds {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 0.75rem;
+  padding: 12px;
+  /* display: flex; */
+  align-items: center;
+  gap: 2rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  width: 62%;
+}
+
+.funds:hover {
+  border-color: #3b82f6;
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.1);
+  transform: translateY(-2px);
+}
+
+.funds p {
+  color: #cbd5e1;
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin: 0;
+  flex: 1;
+}
+
+/* Button styling */
+.addBtn {
+  background-color: #22c55e !important;
+  color: #ffffff !important;
+  border: none !important;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.addBtn:hover {
+  background-color: #16a34a !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+  text-decoration: none;
+}
+
+.withdrawBtn {
+  background-color: #1e293b !important;
+  color: #3b82f6 !important;
+  border: 2px solid #3b82f6 !important;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.withdrawBtn:hover {
+  background-color: #3b82f6 !important;
+  color: #ffffff !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  text-decoration: none;
+}
+
+/* Funds more info section */
+.fundsMore {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.cols {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.cols:hover {
+  border-color: #3b82f6;
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.1);
+}
+
+.cols span {
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.cols span p {
+  color: #cbd5e1;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #3b82f6;
+}
+
+/* Table styling */
+.tables {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.datas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #334155;
+  transition: background-color 0.2s ease;
+}
+
+.datas:hover {
+  background-color: rgba(59, 130, 246, 0.05);
+  border-radius: 0.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.datas:last-child {
+  border-bottom: none;
+}
+
+.datas p {
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+.datas p:first-child {
+  color: #64748b;
+  font-weight: 500;
+}
+
+.datas p:last-child {
+  color: #f8fafc;
+  font-weight: 600;
+  font-family: 'Courier New', monospace;
+  text-align: right;
+}
+
+/* Important/colored data styling */
+:global(.funds-container .imp) {
+  color: #f8fafc !important;
+  font-weight: bold !important;
+}
+
+:global(.funds-container .imp.colored) {
+  color: #3b82f6 !important;
+}
+
+/* HR styling */
+.tables hr {
+  border: none;
+  height: 1px;
+  background-color: #475569;
+  margin: 1rem 0;
+}
+
+/* Second column styling */
+.cols2 {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 200px;
+  margin-top: 11rem;
+  margin-right: 1rem;
+}
+
+.cols2:hover {
+  border-color: #3b82f6;
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.1);
+}
+
+/* Commodity section */
+.commoditys {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.commoditys p {
+  color: #64748b;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.openBtn {
+  background-color: #3b82f6 !important;
+  color: #ffffff !important;
+  border: none !important;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.openBtn:hover {
+  background-color: #2563eb !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  text-decoration: none;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .funds {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+  
+  .funds p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .addBtn,
+  .withdrawBtn {
+    width: 100%;
+    max-width: 200px;
+  }
+  
+  .fundsMore {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .cols,
+  .cols2 {
+    padding: 1rem;
+  }
+  
+  .cols span p {
+    font-size: 1.125rem;
+  }
+  
+  .datas {
+    padding: 0.5rem 0;
+  }
+  
+  .datas p {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    width: 100%;
+  }
+  
+  .funds {
+    padding: 1rem;
+  }
+  
+  .funds p {
+    font-size: 0.875rem;
+  }
+  
+  .addBtn,
+  .withdrawBtn {
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+    width: 100%;
+  }
+  
+  .cols span p {
+    font-size: 1rem;
+  }
+  
+  .datas p {
+    font-size: 0.625rem;
+  }
+  
+  .commoditys {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  .commoditys p {
+    font-size: 0.875rem;
+  }
+  
+  .openBtn {
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+    width: 80%;
+  }
+  .cols2{
+    margin: 0rem !important;
+  }
+}

@@ -1,3 +1,4 @@
+# Node_modules
 backend/node_modules
 frontend/node_modules
 dashboard/node_modules
@@ -5,3 +6,6 @@ dashboard/node_modules
 # Environment files
 .env
 *.env
+
+# Unit Testing
+frontend/src/test

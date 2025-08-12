@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Hero.module.css";
+// import { Link } from "react-router-dom"; unit testing
 import { Link } from "react-router-dom";
 
 function Hero() {
@@ -17,11 +18,13 @@ function Hero() {
           Online Platform to invest in stocks, derivatives, mutual funds, and
           more
         </p>
-        
 
-        <Link to="/signup"><button className={`btn btn-primary ${styles.heroButton}`}>
-          Signup Now
-        </button></Link>
+        {/* <Link to="/signup"></Link> unit testing  */}
+        <Link to="/signup">
+          <button className={`btn btn-primary ${styles.heroButton}`}>
+            Signup Now
+          </button>
+        </Link>
       </div>
     </div>
   );
